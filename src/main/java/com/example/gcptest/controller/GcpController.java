@@ -13,7 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("api")
-@CrossOrigin("http://localhost:3000")
+@CrossOrigin({"http://localhost:3000", "http://34.30.119.210"})
 public class GcpController {
     private final GcpService gcpService;
     @PostMapping
