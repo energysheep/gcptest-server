@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk-slim
+FROM openjdk:17
 # 프로젝트를 복사해서
 COPY . /app/
 # 도커 파일안에서 빌드를 치고
