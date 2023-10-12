@@ -2,7 +2,6 @@ package com.example.gcptest.domain.request;
 
 import com.example.gcptest.domain.entity.Member;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 //
