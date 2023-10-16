@@ -16,7 +16,7 @@ jobs:
     
     - shell: bash
       env:
-        USERNAME: ${{ secrets.Environments.DOCKER.USERNAME }}
+        USERNAME: ${{ secrets.DOCKER-USERNAME }}
       run: echo ${USERNAME}
         
       
@@ -34,13 +34,13 @@ jobs:
     
     
     - name: Build the Docker image
-      run: docker build -t  ${{ secrets.Environments.DOCKER.USERNAME }}/ ${{ secrets.Environments.DOCKER.REPOSITORY }} . 
+      run: docker build -t  ${{ secrets.DOCKER-USERNAME }}/ ${{ secrets.DOCKER-REPOSITORY }} . 
       
     - name: Docker Login
       uses: docker/login-action@v3.0.0
       with:
-        username: ${{ secrets.Environments.DOCKER.USERNAME }}
-        password: ${{ secrets.Environments.DOCKER.PASSWORD }}
+        username: ${{ secrets.DOCKER-USERNAME }}
+        password: ${{ secrets.DOCKER-PASSWORD }}
 
 
 
