@@ -34,7 +34,7 @@ jobs:
     
     
     - name: Build the Docker image
-      run: docker build -t  ${{ secrets.USERNAME }}/ ${{ secrets.REPOSITORY}} . 
+      run: docker build -t  ${{ secrets.DOCKER/USERNAME }}/ ${{ secrets.DOCKER/REPOSITORY}} . 
       
     - name: Docker Login
       uses: docker/login-action@v3.0.0
