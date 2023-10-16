@@ -28,13 +28,13 @@ jobs:
     
     
     - name: Build the Docker image
-      run: docker build -t ${{secrets.USERNAME}}/${{secrets.REPOSITORY}} . 
+      run: docker build -t ${{secrets.env.DOCKER.USERNAME}}/${{secrets.env.DOCKER.REPOSITORY}} . 
       
     - name: Docker Login
       uses: docker/login-action@v3.0.0
       with:
-        username: ${{secrets.USERNAME}}
-        password: ${{secrets.PASSWORD}}
+        username: ${{secrets.env.DOCKER.USERNAME}}
+        password: ${{secrets.env.DOCKER.PASSWORD}}
 
 
 
