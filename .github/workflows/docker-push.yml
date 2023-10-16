@@ -17,7 +17,7 @@ jobs:
     - shell: bash
       env:
         USERNAME: ${{ secrets.Environments.DOCKER.USERNAME }}
-      run: echo $USERNAME
+      run: echo ${USERNAME}
         
       
     - name: Set up JDK 17
