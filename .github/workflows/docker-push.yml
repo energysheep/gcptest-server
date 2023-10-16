@@ -25,6 +25,11 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
+    - name: Docker Login
+      uses: docker/login-action@v3.0.0
+      with:
+        username: ${{ secrets.DOCKER/USERNAME }}
+        password: ${{ secrets.DOCKER/PASSWORD }}
         
     - name: Permission
       run: chmod 744 gradlew
