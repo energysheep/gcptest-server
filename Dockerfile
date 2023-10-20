@@ -9,3 +9,4 @@ COPY build/libs/*T.jar app.jar
 # 그 후에 자파일을 실행한다 .
 ENTRYPOINT ["java", "-jar", "-Dspring.profiles.active=prod", "app.jar"]
 
+#docker run --name my-mysql -d -p 3307:3306 -e MYSQL_ROOT_PASSWORD=1234 -e MYSQL_DATABASE=test mysql
